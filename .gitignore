@@ -13,3 +13,5 @@
 /MovieDatabase.Data.Domain/obj
 /MovieDatabase.Data.SQLServer/bin/Debug/net7.0
 /MovieDatabase.Data.SQLServer/obj
+/MovieDatabase.Data.SQLite/bin
+/MovieDatabase.Data.SQLite/obj

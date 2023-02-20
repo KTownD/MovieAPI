@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using MovieDatabase.Business;
 using MovieDatabase.Business.Interfaces;
 using MovieDatabase.Data.Domain.Interfaces;
-using MovieDatabase.Data.SQLServer;
+using MovieDatabase.Data.SQLite;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,8 +11,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//builder.Services.AddDbContext<DataContext>(options =>
+//    options.UseSqlServer(builder.Configuration["ConnectionStrings:Default"]),
+//    ServiceLifetime.Scoped);
+
+
 builder.Services.AddDbContext<DataContext>(options =>
-    options.UseSqlServer(builder.Configuration["ConnectionStrings:Default"]),
+    options.UseSqlite(builder.Configuration["ConnectionStrings:SQLiteDefault"]),
     ServiceLifetime.Scoped);
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));

@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MovieDatabase.Business\MovieDatabase.Business.csproj" />
-    <ProjectReference Include="..\MovieDatabase.Data.SQLServer\MovieDatabase.Data.SQLServer.csproj" />
+    <ProjectReference Include="..\MovieDatabase.Data.SQLite\MovieDatabase.Data.SQLite.csproj" />
   </ItemGroup>
 
 </Project>
